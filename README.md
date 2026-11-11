@@ -1,38 +1,76 @@
 <h1 align="center">Hi, I'm crazyAI 👋</h1>
-<h3 align="center">AI Engineer · LLM Engineer — post-training, RL for language models, and applied computer vision</h3>
+<h3 align="center">AI Engineer · LLM Engineer · MLOps<br/>I build LLM systems and ML platforms that run in production: RAG assistants, agentic workflows, search ranking, and RL post-training.</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-LLM%20Post--Training-6E40C9?style=flat-square" />
-  <img src="https://img.shields.io/badge/RL-GRPO%20%7C%20DPO-0A66C2?style=flat-square" />
-  <img src="https://img.shields.io/badge/Vision-Detection%20%7C%20Segmentation-1F883D?style=flat-square" />
-  <img src="https://komarev.com/ghpvc/?username=crazyAI427&style=flat-square&color=555555" />
+  <img src="https://img.shields.io/badge/LLM-RAG%20%7C%20Agents%20%7C%20Guardrails-6E40C9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Post--Training-SFT%20%7C%20DPO%20%7C%20GRPO-0A66C2?style=flat-square" />
+  <img src="https://img.shields.io/badge/MLOps-SageMaker%20%7C%20Databricks%20%7C%20K8s%20%2B%20Ray-1F883D?style=flat-square" />
+  <img src="https://img.shields.io/badge/Bittensor-Miner-000000?style=flat-square" />
 </p>
 
 ---
 
 ## 🧠 About me
 
-I build and train machine-learning systems end to end, from data and reward design through training, evaluation, and deployment.
+I'm an AI/LLM engineer who works across the whole lifecycle: data pipelines, model training, serving, monitoring and infrastructure as code.
 
-- 🎯 **LLM post-training:** SFT, DPO and **GRPO** with HuggingFace TRL + PEFT/LoRA on small and mid-size open models (Qwen, Llama, SmolLM)
-- 🎲 **RL environments for LLMs:** game-playing agents and evaluation harnesses built on OpenSpiel, with MCTS and random opponents
-- 🏆 **Competitive training:** I take part in decentralized model-training tournaments (Bittensor Gradients / G.O.D: text, image and environment tracks)
-- 👁️ **Computer vision for autonomy:** semantic segmentation, path planning and perception for driving and drones
-- ⚙️ **MLOps:** Docker, Airflow, Jenkins, DVC, reproducible training pipelines
+- 🤖 **LLM applications:** production RAG shopping assistants, multi-agent data-science workflows, guardrails and LLM tracing/evaluation
+- 🎯 **LLM post-training:** SFT, DPO and GRPO with TRL + LoRA, vLLM, DeepSpeed, and RL environments for multi-turn game-playing agents
+- 🔎 **Search & ranking:** BERT/mBERT relevance scoring, CLIP visual similarity and popularity sorting for e-commerce search
+- ⚙️ **MLOps:** SageMaker Pipelines and endpoints, Databricks/Spark, Terraform/Terragrunt, Jenkins CI/CD, Docker, GKE + Ray, DVC, load testing
 
 ---
 
-## 🚀 Featured work
+## 💼 Experience
+
+### 🛍️ Nike: Search, Ranking & GenAI (AWS)
+
+- **AI shopping assistant:** a LangChain/LangGraph RAG assistant with tool calling, on AWS Bedrock and OpenAI models. It has a knowledge base, guardrails, follow-up prompt generation, Arize Phoenix tracing and an evaluation setup, served through FastAPI with a React/Next.js frontend and deployed with Terraform, Lambda and Jenkins.
+- **Search relevance (SCORE) models:** BERT and sentence-transformer relevance models trained in SageMaker and Databricks pipelines. Deployment is event-driven: an S3 trigger runs Lambda, which starts an ECS task that deploys SageMaker endpoints. Includes Terraform, Jenkins rollback and Locust load tests.
+- **Multilingual search (mBERT):** end-to-end SageMaker Pipelines covering ETL, Feature Store ingestion, training, evaluation, model registration, batch inference and model cards.
+- **Visual similarity search:** CLIP image embeddings and product recommendations, with scheduled data refresh and SageMaker inference behind API Gateway.
+- **Popularity sort service:** Spark feature pipelines, SageMaker serving and DynamoDB lookups, with infrastructure managed in Terragrunt.
+
+### 📊 Avaloka AI: Multi-Agent Data Analyst
+
+- **Datagent:** a YAML-defined, graph-based multi-agent framework (planner, data-processor, training-planner and trainer agents, plus routers). It streams events over FastAPI SSE to a React frontend.
+- **Training jobs:** the agents launch model training on GKE + Ray clusters with Kubernetes manifests and store artifacts in GCS. LLM backends are OpenAI and Groq.
+
+### 🧪 Oddity (Voyage81): AI Product Pipelines
+
+- Production ML pipelines for hyperspectral and color imaging products: multi-camera ingestion, ETL, triage, and per-brand product models.
+- Engineering practices: DVC for data versioning, CircleCI with coverage gates, and pytest.
+
+### 👄 LiRA: Visual Speech Recognition
+
+- A lip-reading phrase classifier: face and mouth-ROI cropping, a ResNet-based video model in PyTorch Lightning, and a Flask inference API.
+
+---
+
+## ⛏️ Bittensor: Decentralized AI Mining
+
+I compete as a miner on Bittensor subnets, where models are trained, evaluated and rewarded on chain.
+
+- **Gradients / G.O.D:** I compete in the text, image and environment tournaments. That covers SFT, DPO and GRPO training pipelines in Docker under hard time limits, and per-model hyperparameter tables.
+  → [Merged_env_tourn_13-20](https://github.com/crazyAI427/Merged_env_tourn_13-20) · [env release 1](https://github.com/crazyAI427/Gradients_RL_tournament-4_20_env_release_1) · [env release 2](https://github.com/crazyAI427/Gradients_RL_tournament-4_20_env_release_2)
+- **Affine:** an OpenSpiel game environment that scores LLM agents against MCTS opponents.
+  → [mcts-api](https://github.com/crazyAI427/mcts-api)
+- **RL for game-playing LLMs:** GRPO with curriculum learning and opponent modeling across Gin Rummy, Liar's Dice, Leduc Poker, Goofspiel and ALFWorld.
+  → [grpo-simple](https://github.com/crazyAI427/grpo-simple)
+- **Swarm:** autonomous drone-navigation policy submissions.
+
+---
+
+## 🚀 Open-source projects
 
 | Project | What it does | Stack |
 |---|---|---|
-| [**grpo-simple**](https://github.com/crazyAI427/grpo-simple) | A step-by-step guide to teaching Qwen3-0.6B to play Liar's Dice and Gin Rummy with GRPO, including game envs and reward functions | TRL · PEFT/LoRA · PyTorch |
-| [**mcts-api**](https://github.com/crazyAI427/mcts-api) | An OpenSpiel evaluation environment that scores an LLM's strategic play against MCTS and random bots | OpenSpiel · Python · Docker |
-| [**Merged_env_tourn_13-20**](https://github.com/crazyAI427/Merged_env_tourn_13-20) | Training and environment pipeline for RL tournament tasks | Python · Docker |
-| [**Segment_based_path_planning**](https://github.com/crazyAI427/Segment_based_path_planning) | SegFormer-B4 Cityscapes segmentation turned into drivable-direction decisions for dashcam scenes | Transformers · PyTorch |
-| [**Vision_Path_Planning**](https://github.com/crazyAI427/Vision_Path_Planning) | Vision-based drive-direction inference from street imagery | PyTorch · OpenCV |
-| [**custom_AI_chunking**](https://github.com/crazyAI427/custom_AI_chunking) | A semantic document-chunking service for RAG pipelines | Python · Flask |
-| [**Desktop Vehicle Sound Classification**](https://github.com/crazyAI427/Desktop-Application-of-Vehicle-Sound-Classification) | A desktop app that classifies vehicle types from audio | TensorFlow · Tkinter |
+| [**grpo-simple**](https://github.com/crazyAI427/grpo-simple) | Teaches Qwen3-0.6B to play Liar's Dice and Gin Rummy with GRPO, step by step | TRL · LoRA · PyTorch |
+| [**Merged_env_tourn_13-20**](https://github.com/crazyAI427/Merged_env_tourn_13-20) | A containerized GRPO trainer with live game-environment rollouts | TRL · vLLM · DeepSpeed · Docker |
+| [**mcts-api**](https://github.com/crazyAI427/mcts-api) | OpenSpiel evaluation of LLM strategic play | OpenSpiel · Docker |
+| [**Vision_Path_Planning**](https://github.com/crazyAI427/Vision_Path_Planning) | SegFormer drivable-road segmentation and waypoint planning | Transformers · OpenCV |
+| [**Segment_based_path_planning**](https://github.com/crazyAI427/Segment_based_path_planning) | Cityscapes segmentation for dashcam scenes | SegFormer · PyTorch |
+| [**custom_AI_chunking**](https://github.com/crazyAI427/custom_AI_chunking) | Semantic document chunking for RAG | Python · Flask |
 
 ---
 
@@ -46,60 +84,41 @@ I build and train machine-learning systems end to end, from data and reward desi
   <img src="https://img.shields.io/badge/TRL-FF9D00?style=flat-square" />
   <img src="https://img.shields.io/badge/PEFT%20%2F%20LoRA-8A2BE2?style=flat-square" />
   <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" />
-  <img src="https://img.shields.io/badge/llama.cpp-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/DeepSpeed-0A66C2?style=flat-square" />
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/RAG-4B8BBE?style=flat-square" />
+  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square" />
+  <img src="https://img.shields.io/badge/AWS%20Bedrock-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Arize%20Phoenix-6E40C9?style=flat-square" />
 </p>
 
-**Computer vision & audio**
+**MLOps & Cloud**
+
+<p>
+  <img src="https://img.shields.io/badge/SageMaker-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ray-028CF0?style=flat-square&logo=ray&logoColor=white" />
+  <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/DVC-13ADC7?style=flat-square&logo=dvc&logoColor=white" />
+  <img src="https://img.shields.io/badge/W%26B-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black" />
+</p>
+
+**Languages & Tooling**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,bash,docker,aws,gcp,linux,git,githubactions,jenkins,fastapi,react&perline=11" />
+</p>
+
+**Computer Vision**
 
 <p>
   <img src="https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logoColor=black" />
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
+  <img src="https://img.shields.io/badge/CLIP-412991?style=flat-square" />
   <img src="https://img.shields.io/badge/SegFormer-76B900?style=flat-square&logo=nvidia&logoColor=white" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white" />
-  <img src="https://img.shields.io/badge/Librosa-FF4B4B?style=flat-square" />
+  <img src="https://img.shields.io/badge/PyTorch%20Lightning-792EE5?style=flat-square&logo=lightning&logoColor=white" />
 </p>
-
-**Languages & MLOps**
-
-<p>
-  <img src="https://skillicons.dev/icons?i=python,cpp,bash,docker,linux,git,githubactions,jenkins,flask,fastapi&perline=10" />
-</p>
-<p>
-  <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/DVC-13ADC7?style=flat-square&logo=dvc&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
-  <img src="https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black" />
-</p>
-
----
-
-## 📊 GitHub stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=crazyAI427&show_icons=true&hide_border=true&theme=transparent&count_private=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=crazyAI427&layout=compact&hide_border=true&theme=transparent" />
-</p>
-
----
-
-## 🔭 Currently exploring
-
-- Reward design and curriculum for **multi-turn, game-playing LLM agents**
-- **Preference optimization** (DPO and variants) on small open models
-- Vision-language-action models for robot and drone navigation
-
----
-
-## 📫 Get in touch
-
-<!-- Replace the placeholders below with your real links, or delete the ones you don't use -->
-<p>
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:YOUR-EMAIL"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
-  <a href="https://huggingface.co/YOUR-HF"><img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /></a>
-</p>
-
-<p align="center"><i>Open to collaborations on LLM training, RL environments and applied CV.</i></p>
